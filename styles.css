@@ -1,0 +1,268 @@
+/*font-family: 'PT Sans', sans-serif;*/
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #eee;
+}
+
+.wrapper{
+    margin:0 auto;
+    width:960px;
+    padding: 50px;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+}
+
+.task_one{
+    padding:0;
+}
+
+.task_one h3{
+ text-align: center;
+}
+
+.task_one p{
+    text-indent: 1.5em;
+}
+
+.task_two{
+    padding:20px 0;
+}
+.stars {
+    background: url("img/star_sprite.png") repeat-x 0 0 ;
+    width: 90px;
+    margin: 0 auto;
+}
+
+.stars input[type="radio"] {
+    position: absolute;
+    display: none;
+}
+
+.stars span {
+    display: block;
+    width: 0;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 18px;
+    background: url("img/star_sprite.png") repeat-x 0 -16px;
+    transition: width 0.5s;
+}
+
+.stars label:hover ~ span {
+    background-position: 0 -16px;
+}
+/* ------- ON HOVER -------- */
+
+#star_5:hover ~ span {
+    width: 100%;
+}
+
+#star_4:hover ~ span {
+    width: 80%;
+}
+
+#star_3:hover ~ span {
+    width: 60%;
+}
+
+#star_2:hover ~ span {
+    width: 40%;
+}
+
+#star_1:hover ~ span {
+    width: 20%;
+}
+/* ------- ON CHECKED -------- */
+
+.star_5:checked ~ span {
+    width: 100%;
+}
+
+.star_4:checked ~ span {
+    width: 80%;
+}
+
+.star_3:checked ~ span {
+    width: 60%;
+}
+
+.star_2:checked ~ span {
+    width: 40%;
+}
+
+.star_1:checked ~ span {
+    width: 20%;
+}
+
+.stars label {
+    display: block;
+    float: left;
+    position: relative;
+    z-index: 1;
+    width: 18px;
+    height: 16px;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+/*.star_1, .star_2,  .star_3,  .star_4,  .star_5 {*/
+    /*outline: none;*/
+/*}*/
+
+.task_three{
+     padding:20px 0;
+}
+
+.progress{
+    margin: 0 auto;
+    height: 25px;
+    width: 400px;
+    background-color: #fff;
+    padding: 0;
+    border-radius: 16px;
+    border:1px solid #fff;
+    position:relative;
+    box-shadow: inset -2px 1px 5px 0 rgba(0,0,0,0.19);
+}
+
+.progress::before{
+    content:" ";
+    display: block;
+    background:linear-gradient(to bottom, rgba(188,235,188,1) 0%, rgba(128,233,124,1) 50%, rgba(58,218,47,1) 51%, rgba(143,224,152,1) 100%);
+    width:20%;
+    height:100%;
+    border-radius: inherit;
+}
+
+.progress::after{
+    content:"20%";
+    position: absolute;
+    top:15%;
+    left:45%;
+    font-size:0.9em;
+}
+
+.task_four{
+    padding: 20px 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+a.button{
+    text-decoration: none;
+    padding: 4px 20px;
+    font-size: 14px;
+    color: #000;
+    font-family: Arial, sans-serif;
+    letter-spacing: 0.5px;
+}
+
+.button{
+    padding: 4px 20px;
+    border: 1px solid #dadada;
+    border-bottom-color: #bbbbbb;
+    border-radius: 5px;
+    font-size:14px;
+    background: linear-gradient(0deg, rgb(226,226,226) 30%, rgb(242,242,242) 70%);
+}
+
+.button:focus {
+    outline:none;
+    border: 1px solid #000000;
+}
+
+.button:hover {
+    background: linear-gradient(to bottom, rgba(227,224,227,1) 0%,
+    rgba(255,255,255,1) 31%, rgba(255,255,255,1) 68%, rgba(217,213,217,1) 100%);
+}
+
+.button:active {
+     background: #fff;
+}
+
+.task_five{
+    padding:20px 0;
+}
+
+li{
+    list-style-type:none;
+
+}
+
+.browser{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width:100%;
+    padding: 0;
+}
+
+.browser_chrome {
+    width:125px;
+    height:125px;
+    color: #cc0000;
+}
+
+.browser_chrome [alt="ro"]:before {
+    content: 'Ch';
+    color: #339933;
+}
+
+.browser_chrome [alt="ro"]:after {
+    content: 'me';
+    color: #ffcc00;
+}
+.browser_firefox{
+    width:125px;
+    height:125px;
+    color: #ff9900;
+}
+
+.browser_opera{
+    width:125px;
+    height:125px;
+    color: #cc0000;
+}
+.browser_safari{
+    width:125px;
+    height:125px;
+    color: #666666;
+}
+.browser_IE{
+    width:125px;
+    height:125px;
+    color: #006699;
+    margin-left:auto;
+}
+
+.task_six{
+    padding:20px 0;
+    column-count: 2;
+    column-width: 400px;
+    column-gap: 50px;
+    font-family: "PT Sans", sans-serif;
+}
+
+.task_six h3{
+    column-span: all;
+}
+
+.task_six p{
+    text-indent: 1.5em;
+}
+
+.article_{
+    padding: 0;
+}
+
+.article_list::before{
+    content:"—";
+    margin: 0 0 0 -20px;
+}
